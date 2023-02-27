@@ -1,0 +1,1 @@
+Learning what pointers are and how we can nuse them. We also look at arrays and how to use them as well. Strings are also part of our learning objective and we learn how to use and manipulate them. In conclusion, we aslo look at the scope of variables. 
