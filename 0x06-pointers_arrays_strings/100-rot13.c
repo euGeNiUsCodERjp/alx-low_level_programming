@@ -1,27 +1,27 @@
 #include "main.h"
 
 /**
- * rot13 -  a function that encodes a string using rot13.
- * @s: An input string to encode using rot13
- * Return: An encode string
+ *rot13 - encodes a strin using rot13
+ * @n: pointer to the string
+ * Return: *n
  */
-char *rot13(char *s)
-{
-	int i = 0;
 
-	while (s[i] != '\0')
+char *rot13(char *n)
+{
+	int i, j;
+	char imma1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char immarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	for (i = 0; n[i] != '\0'; i++)
 	{
-		while ((s[i] >= 'a' && s[i] <= 'z') ||
-				(s[i] >= 'A' && s[i] <= 'Z'))
+		for (j = 0; j < 52; j++)
 		{
-			if ((s[i] >= 'a' && s[i] <= 'm') ||
-					(s[i] >= 'A' && s[i] <= 'M'))
-				s[i] += 13;
-			else
-				s[i] -= 13;
-			i++;
+			if (n[i] == imma1[j])
+			{
+				n[i] = immarot[j];
+				break;
+			}
 		}
-		i++;
 	}
-	return (s);
+	return (n);
 }
