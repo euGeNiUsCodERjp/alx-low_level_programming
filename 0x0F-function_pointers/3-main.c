@@ -1,4 +1,4 @@
-i#include "3-calc.h"
+#include "3-calc.h"
 /**
  *  * main - Entry point
  *   * @argc: the number of the parameters
